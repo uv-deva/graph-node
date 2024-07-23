@@ -317,6 +317,8 @@ impl<C: Blockchain> TriggersAdapter<C> for TriggersAdapterWrapper<C> {
         to: BlockNumber,
         filter: &Arc<TriggerFilterWrapper<C>>,
     ) -> Result<(Vec<BlockWithTriggers<C>>, BlockNumber), Error> {
+        println!("===========> scan_triggers");
+        panic!("Not implemented");
         self.adapter
             .scan_triggers(from, to, filter)
             .await
