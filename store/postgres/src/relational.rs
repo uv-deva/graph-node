@@ -529,6 +529,7 @@ impl Layout {
         {
             for e in vec {
                 let block = e.clone().deserialize_block_number::<Entity>()?;
+                println!("block from entity: {:?}", block);
                 let en = e.deserialize_with_layout::<Entity>(self, None)?;
                 entities.insert(block, en);
             }
