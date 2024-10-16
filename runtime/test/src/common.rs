@@ -9,9 +9,7 @@ use graph::ipfs::IpfsRpcClient;
 use graph::ipfs::ServerAddress;
 use graph::log;
 use graph::prelude::*;
-use graph_chain_ethereum::{
-    Chain, DataSource, DataSourceTemplate, Mapping, TemplateSource,
-};
+use graph_chain_ethereum::{Chain, DataSource, DataSourceTemplate, Mapping, TemplateSource};
 use graph_runtime_wasm::host_exports::DataSourceDetails;
 use graph_runtime_wasm::{HostExports, MappingContext};
 use semver::Version;

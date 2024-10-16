@@ -1,7 +1,10 @@
 use crate::{
     blockchain::{block_stream::EntityWithType, Block, Blockchain},
     components::{link_resolver::LinkResolver, store::BlockNumber},
-    data::{subgraph::{calls_host_fn, SPEC_VERSION_1_3_0}, value::Word},
+    data::{
+        subgraph::{calls_host_fn, SPEC_VERSION_1_3_0},
+        value::Word,
+    },
     data_source,
     prelude::{DataSourceContext, DeploymentHash, Link},
 };
