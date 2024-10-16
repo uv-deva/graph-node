@@ -625,7 +625,6 @@ impl Layout {
         for (_, vec) in &mut entities {
             vec.sort_by(|a, b| a.vid.cmp(&b.vid));
         }
-        println!("=====>2 ");
         Ok(entities)
     }
 

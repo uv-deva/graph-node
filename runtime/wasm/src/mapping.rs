@@ -63,21 +63,7 @@ where
                         host_metrics.cheap_clone(),
                         experimental_features,
                     )
-                    .map_err({
-                        match &inner {
-                            WasmRequestInner::TriggerRequest(trigger) => {
-                                println!("====> trigger: {:?}", trigger.handler_name());
-                            }
-                            WasmRequestInner::BlockRequest(BlockRequest {
-                                block_data: _,
-                                handler,
-                            }) => {
-                                println!("====> HANDLER: {:?}", handler);
-                            }
-                        }
-
-                        Into::into
-                    })
+                    .map_err(Into::into)
                     .and_then(|module| match inner {
                         WasmRequestInner::TriggerRequest(trigger) => {
                             handle_trigger(&logger, module, trigger, host_metrics.cheap_clone())
