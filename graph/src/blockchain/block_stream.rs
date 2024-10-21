@@ -267,11 +267,8 @@ impl<C: Blockchain> BlockWithTriggers<C> {
         mut trigger_data: Vec<Trigger<C>>,
         logger: &Logger,
     ) -> Self {
-        println!("trigger_data: {:?}", trigger_data);
         // This is where triggers get sorted.
         trigger_data.sort();
-
-        println!("trigger_data: {:?}", trigger_data);
 
         let old_len = trigger_data.len();
 
